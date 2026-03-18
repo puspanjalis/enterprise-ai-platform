@@ -1,0 +1,13 @@
+resources:
+  jobs:
+    enterprise_ai_training_job:
+      name: enterprise-ai-training-job
+      tasks:
+        - task_key: build_features
+          notebook_task:
+            notebook_path: /Repos/demo/models/training_placeholder
+        - task_key: register_model
+          depends_on:
+            - task_key: build_features
+          notebook_task:
+            notebook_path: /Repos/demo/models/monitoring_placeholder
