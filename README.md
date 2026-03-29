@@ -18,8 +18,6 @@ This repository demonstrates how to design an **enterprise AI platform** that:
 
 The focus is not on model complexity, but on **system design and platform thinking**.
 
----
-
 ## Overview
 
 This repository is a **production-style AI platform blueprint** demonstrating how to move from:
@@ -32,8 +30,6 @@ It is intentionally designed as:
 - extensible
 - safe for public sharing (synthetic data only)
 
----
-
 ## What this repo demonstrates
 
 - End-to-end ML pipeline (data → model → evaluation)
@@ -41,8 +37,6 @@ It is intentionally designed as:
 - CI/CD integration for reproducibility
 - Infrastructure-ready structure for scaling
 - Agentic AI extension (RAG + orchestration patterns)
-
----
 
 ## Architecture
 
@@ -80,22 +74,21 @@ It is intentionally designed as:
 - Agent orchestration
 - Extensible for tool-calling workflows
 
----
-
 ## Repository Structure
 
+```text
 enterprise-ai-platform/
-├── run_pipeline.py
-├── pipeline/ # ETL, feature engineering, validation
-├── monitoring/ # Drift detection, data quality, health checks
-├── agents/ # RAG + agent orchestration patterns
-├── models/ # Training notebooks / placeholders
-├── infra/ # CI/CD + IaC templates
-├── docs/ # Architecture + design decisions
-├── examples/ # Execution walkthrough
-└── data/sample_data # Synthetic dataset
-
----
+├── run_pipeline.py                     # Main entry point for workflow orchestration
+├── pipeline/                          # ETL, feature engineering, validation
+├── monitoring/                        # Drift detection, data quality, health checks
+├── agents/                            # RAG + agent orchestration patterns
+├── models/                            # Training notebooks / placeholders
+├── infra/                             # CI/CD + IaC templates
+├── docs/                              # Architecture + design decisions
+├── examples/                          # Execution walkthrough
+└── data/
+    └── sample_data/                   # Synthetic dataset
+```
 
 ## Quick Start
 
@@ -113,7 +106,6 @@ python run_pipeline.py
 docker build -t enterprise-ai-platform .
 docker run --rm enterprise-ai-platform
 ```
----
 
 ## Platform Capabilities
 
@@ -123,14 +115,12 @@ docker run --rm enterprise-ai-platform
 - Extensible to multiple AI use cases
 - Designed for future evolution into agentic systems
 
----
-
 ## System Design
 
 ### Detailed design and reasoning:
 
-- System Design￼
-- Decisions & Trade-offs￼
+- [System Design](docs/SYSTEM_DESIGN.md)
+- [Decisions & Trade-offs](docs/DECISIONS_AND_TRADEOFFS.md)
 
 ### Key principles:
 
@@ -138,8 +128,6 @@ docker run --rm enterprise-ai-platform
 - Optimize for governance and reproducibility
 - Separate concerns across data, ML, and monitoring layers
 - Design for extensibility, not one-off solutions
-
-⸻
 
 ## Results
 
@@ -151,8 +139,6 @@ docker run --rm enterprise-ai-platform
 
 These metrics are fixed for demonstration consistency.
 
-⸻
-
 ## Business Impact
 
 This platform pattern enables:
@@ -162,8 +148,6 @@ This platform pattern enables:
 - Clear governance and auditability
 
 In enterprise settings, such platforms significantly reduce time-to-production and improve reuse across AI initiatives.
-
-⸻
 
 ## Agentic AI Extension
 
@@ -184,13 +168,9 @@ This reflects the industry shift from:
 
 prediction systems → action-oriented AI systems
 
-⸻
-
 ## Example Walkthrough
 
-See: examples/enterprise_run.md￼
-
-⸻
+See: [examples/enterprise_run.md](examples/enterprise_run.md)
 
 ## Roadmap
 
@@ -201,8 +181,6 @@ See: examples/enterprise_run.md￼
 - LLM-native workflows
 - Advanced observability dashboards
 
-⸻
-
 ## IP & Safety
 
 - Synthetic data only (no customer data)
@@ -210,15 +188,13 @@ See: examples/enterprise_run.md￼
 - No proprietary enterprise logic
 - Architecture-focused implementation
 
-⸻
-
 ## License
 
 MIT
 
 ## Final Note
 
-This repository reflects how modern AI systems should be built: ***bold & italic not as isolated models, but as scalable, observable, and extensible platforms.***
+This repository reflects how modern AI systems should be built: ***not as isolated models, but as scalable, observable, and extensible platforms.***
 
 ---
 
