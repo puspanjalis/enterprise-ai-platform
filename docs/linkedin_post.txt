@@ -1,1 +1,0 @@
-🚀 Just launched an Enterprise AI Platform case study: shows scalable data pipeline + MLOps with Snowflake & Databricks! github.com/puspanjalis/enterprise-ai-platform has code & architecture diagrams. Check it out and let me know your thoughts!
